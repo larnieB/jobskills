@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JobSkills — Dashboard</title>
+  <meta name="description" content="JobSkills dashboard with quick actions for AI Job Matching, Skills, and Online Jobs." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#2b89f0', 600: '#1f6ed4' },
+            accent: { 500: '#7a5cff', 600: '#6b50eb' }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2,6,23,0.12)',
+            glow: '0 0 0 4px rgba(122,92,255,0.2)'
+          },
+          backgroundImage: {
+            dash: 'radial-gradient(1000px 400px at 0% -10%, rgba(122,92,255,.18), transparent 40%), radial-gradient(900px 300px at 100% -20%, rgba(43,137,240,.18), transparent 40%), linear-gradient(180deg, #0b1020, #0b1225)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="min-h-screen bg-dash text-white">
+
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-900/60 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-500 to-brand-500 grid place-items-center">⚡</div>
+        <span class="font-semibold tracking-tight">JobSkills Dashboard</span>
+      </div>
+      <div class="flex items-center gap-3 text-sm">
+        <span class="hidden sm:inline text-white/70">👋 Hi, <strong><?php echo htmlspecialchars($userName); ?></strong></span>
+        <button id="logoutBtn" class="px-3 py-1.5 rounded-lg border border-white/15 hover:bg-white/5">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Quick Actions -->
+  <section id="hero" class="py-10 sm:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-2xl sm:text-3xl font-bold">Welcome back, <?php echo htmlspecialchars($userName); ?> 👋</h1>
+      <p class="mt-1 text-white/80">Kickstart your day with quick actions below.</p>
+
+      <!-- Cards -->
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="jobmatching.php" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-accent-500/20 blur-2xl"></div>
+          <div class="flex items-start justify-between">
+            <h3 class="text-lg font-semibold">AI Job Matching</h3>
+            <span class="text-xs px-2 py-1 rounded bg-accent-500/20 border border-accent-500/30">New</span>
+          </div>
+          <p class="mt-2 text-sm text-white/80">Find your dream job automatically matched by AI.</p>
+          <div class="mt-4 inline-flex items-center gap-2 text-accent-500 group-hover:gap-3 transition">
+            <span class="text-sm font-medium">Start matching</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.172 12 8.222 7.05l1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+          </div>
+        </a>
+
+        <a href="#" data-action="skills" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <div class="absolute -left-8 -bottom-10 w-32 h-32 rounded-full bg-brand-500/20 blur-2xl"></div>
+          <h3 class="text-lg font-semibold">Skills</h3>
+          <p class="mt-2 text-sm text-white/80">Gain skills that make you valuable in the job market.</p>
+          <div class="mt-4 inline-flex items-center gap-2 text-brand-500 group-hover:gap-3 transition">
+            <span class="text-sm font-medium">Explore skills</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.172 12 8.222 7.05l1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+          </div>
+        </a>
+
+        <a href="freelance.php" data-action="freelance" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <div class="absolute -right-6 -bottom-10 w-28 h-28 rounded-full bg-emerald-400/20 blur-2xl"></div>
+          <h3 class="text-lg font-semibold">Online Jobs</h3>
+          <p class="mt-2 text-sm text-white/80">Browse freelance jobs curated daily.</p>
+          <div class="mt-4 inline-flex items-center gap-2 text-emerald-400 group-hover:gap-3 transition">
+            <span class="text-sm font-medium">Browse gigs</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.172 12 8.222 7.05l1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="py-10 border-t border-white/10 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-semibold">Today at a glance</h2>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <?php foreach ($stats as $label => $value): ?>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+          <p class="text-sm text-white/70"><?= ucfirst($label) ?></p>
+          <p class="mt-1 text-3xl font-bold"><?= htmlspecialchars($value) ?></p>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 hidden">
+    <div class="rounded-xl border border-white/10 bg-slate-900/90 backdrop-blur px-4 py-2 shadow-soft text-sm">
+      <span id="toastMsg">Action</span>
+    </div>
+  </div>
+
+  <script>
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    function showToast(message){
+      toastMsg.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(()=> toast.classList.add('hidden'), 1800);
+    }
+
+    const clickMap = {
+      match: () => showToast('Opening AI Job Matching…'),
+      skills: () => showToast('Opening Skills…'),
+      freelance: () => showToast('Opening Online Jobs…')
+    };
+
+    document.addEventListener('click', e=>{
+      const a = e.target.closest('[data-action]');
+      if(!a) return;
+      e.preventDefault();
+      const action = a.getAttribute('data-action');
+      clickMap[action]?.();
+    });
+
+    // Logout
+    document.getElementById('logoutBtn')?.addEventListener('click', ()=>{
+      fetch('logout.php').then(()=> window.location.href = 'index.html');
+    });
+  </script>
+</body>
+</html>

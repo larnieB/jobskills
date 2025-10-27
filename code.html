@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jobskill Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0d8bf2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-700/50 shadow-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<svg class="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Jobskill</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">AI Basics Literacy</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Job Interview Tips</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Public Relations</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm px-4 py-2 rounded-lg hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Log In</button>
+<button class="bg-primary text-white font-bold text-sm px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">Sign Up</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="@container">
+<div class="relative min-h-[480px] rounded-xl overflow-hidden flex items-center justify-center p-8 bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCY8ac2aJOvqnkgudPrkKlkhtbFyvVpEdGu2exk8tFD45zJC4VehPpvpMPCCJNwpZEkUvDNwUSy6VPClIqLwrtowkU2Dcf15BGGx7PlUNfPPdtd7nBWmKo5CYoe6HznIpDDgzusL9m6_iJvhZd7vBWm-LLm3zSmKRUykoj5H9pVVAfzTlBWcBjWXsZGX7hPuujoYPobDnn1A09tRc_YfPAQTIYfWtVi-IpK02UAcvYNbZHzdhPLe-JeAsD1eNMXUeSLA1pzMdaaPC4");'>
+<div class="text-center text-white max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-black tracking-tighter">Welcome to Jobskill</h1>
+<p class="mt-4 text-base md:text-lg text-white/90">
+                  Your go-to resource for mastering AI basics, acing job interviews, and enhancing your public relations skills.
+                </p>
+<button class="mt-8 bg-primary text-white font-bold px-6 py-3 rounded-lg text-base hover:bg-primary/90 transition-transform transform hover:scale-105">Explore Courses</button>
+</div>
+</div>
+</div>
+<section class="py-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white px-4">Featured Courses</h2>
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+<img alt="AI Basics" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdG5k50CqWaZ5_QKX-2Z70HuVbQh2oQG2k6OqilyUYSH07E3hhfdQjqpJJLCnCXVH_YgrV-mdJWiQ34Bl3U9TQ7Rt1zbqY13qFNLbFFjvFqsir5USODBEkiktqyJ7hXuamZ2PgQEGN-nNNycTOEi2OO2PX-AFIeYeMYpBzDDRgDn0ZA2C1-bpyad8rd21ivvXQEQ4vubJnLq3NwmF_8n4bRvv_54AFfdp_Ju92Ntmvi5P2ThBsFtqxnzms17C9XdVuhSDS8cOBmYs"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Basics Literacy</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Learn the fundamentals of artificial intelligence and its applications in various industries.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+<img alt="Job Interview Tips" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeBBft9sJiYEm7rnYy8-iQB_q5slxP-HcuwCe73bOt8RHpz0Ui1BCmQXI2Jm4uTAxCTTXanHsKemyzsAiAdlxBF-3US-pLJfIM3SDSL4TucuA30FTxcwfMzrC2sB-9AXpjWSyt-h-lz_Uczpc5ZPiQffHbDydU-3UnrkDg07mWto6Q1whdfr8gwwO935oTuZxWCbD3J_J-5l7r2oKfxTmj-l-jB1IEsndDANABqNFddJllAgQfX43NluitY1cyOpcvVUFTz9N7lrQ"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Job Interview Tips</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Master the art of job interviews with expert tips and strategies to impress potential employers.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+<img alt="Public Relations" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxhn38TT8eGj-QklDGTMNnLQTOSEiQMSUU5DvvPWcPGM3DeevEAhJmvDFRGgO-5yIx1vPT8YP7Y1hGCcHB1mxUXNfjH6021fDVmjqpuo9FslXGM2M6fzvkMzOnCNfdx_IbxxNzg-10vMSiYMiTGwcDysfNWuG4uqcYq3PjhY0tJO0DnAl9y7Dbvj4LDzeaenZmZ8ofXuZZ72dkhFYyUmsi7povXWCyBTUvscDfekcQ5_ChabMU4gOkvJ87Jzk82wLFr-oZ4APT_U8"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Public Relations</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Enhance your public relations skills with effective communication techniques and reputation management.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white px-4">Quick Tips</h2>
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50">
+<div class="text-primary"><svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A96,96,0,0,0,32,120v8a48.05,48.05,0,0,0,48,48h4v16a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V176h4a48.05,48.05,0,0,0,48-48v-8A96,96,0,0,0,128,24Zm0,176H96V160h64v40Zm80-80a32,32,0,0,1-32,32H80a32,32,0,0,1-32-32v-8a80,80,0,0,1,160,0Z"></path></svg></div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">AI in the Workplace</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Understand how AI is transforming the workplace and how to leverage it for your career.</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50">
+<div class="text-primary"><svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M216,72H168V64a40,40,0,0,0-40-40H128a40,40,0,0,0-40,40v8H40a8,8,0,0,0-8,8V208a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V80A8,8,0,0,0,216,72ZM104,64a24,24,0,0,1,24-24h0a24,24,0,0,1,24,24v8H104Zm104,136H48V88H208Z"></path></svg></div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Interview Success</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Get quick tips on how to prepare for and succeed in your next job interview.</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50">
+<div class="text-primary"><svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M234.29,114.28,146.3,26.29a8,8,0,0,0-11.32,0L96,65.37,56.71,26.07A8,8,0,0,0,45.39,26l-18.7,18.7a8,8,0,0,0,0,11.32L66.63,96,27.34,135.29a8,8,0,0,0,0,11.32l18.7,18.7a8,8,0,0,0,11.31,0L96.63,126l39.29,39.29a8,8,0,0,0,11.32,0l87.05-87A8,8,0,0,0,234.29,114.28ZM42.69,50.7,54,39.37l35.31,35.32L78.69,85.31Zm14.7,133.22L42.7,198.61l-14-14L64.05,149.3ZM90.69,110.69,80,121.37,44.7,86l10.68-10.69ZM144,42.7,192,90.69,101.37,181.31l-48-48ZM218.61,120l-14,14L160,89.37l14-14Z"></path></svg></div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Effective Communication</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Learn effective communication strategies to enhance your public relations efforts.</p>
+</div>
+</div>
+</section>
+<section class="py-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white px-4">Resources</h2>
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50">
+<div class="text-primary"><svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M232,96a8,8,0,0,1-8,8H179.31l-32-64H216a8,8,0,0,1,0,16H160.69l32,64H32a8,8,0,0,1,0-16H88.69l32-64H40a8,8,0,0,1,0-16H91.31l32,64H232a8,8,0,0,1,8,8ZM128,152a64.07,64.07,0,0,0,64-64H64A64.07,64.07,0,0,0,128,152Zm0-112a48.05,48.05,0,0,1,48,48H80A48.05,48.05,0,0,1,128,40Zm0,192a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-8A8,8,0,0,0,128,232Z"></path></svg></div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">AI Literacy Guide</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Download our comprehensive guide to AI literacy and stay ahead in the digital age.</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50">
+<div class="text-primary"><svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Z"></path></svg></div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Interview Practice Videos</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Watch practice interview videos to improve your performance and build confidence.</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50">
+<div class="text-primary"><svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"></path></svg></div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">PR Templates</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Access PR templates for press releases, media kits, and other essential documents.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="bg-white dark:bg-background-dark mt-auto border-t border-gray-200 dark:border-gray-700/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2024 Jobskill. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
